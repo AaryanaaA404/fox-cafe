@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Edu QLD Hand';
+    src: url('../fonts/EduQLDHand-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Edu QLD Hand', cursive;
+}
+
 body{
     background-color: #ffb86a;
     margin: 0;
@@ -7,6 +18,26 @@ body{
     width: 100%;
     height: auto;
     display: block;
+}
+
+.banner_container {
+    position: relative; /* This makes the text anchor to this container */
+    width: 100%;
+}
+
+.banner_container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #441306; /* Your light cream color */
+    font-size: 2rem;
+    text-align: center;/* Add these lines for the background box */
+    background-color: #ffb76ab4; 
+    padding: 10px 25px;                        /* Space inside the box */
+    border-radius: 10px;                       /* Rounded corners */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Lighter shadow since the box handles contrast */
 }
 
 .navbar {
@@ -24,11 +55,70 @@ body{
     z-index: 100;
 }
 
+.site-name {
+    position: absolute;      /* Takes it out of the flex flow */
+    left: 50%;               /* Moves the left edge to the middle */
+    transform: translateX(-50%); /* Pulls it back by half its own width to perfectly center it */
+    margin: 0;               /* Remove the auto margin, we don't need it anymore */
+    font-size: 1.6rem;
+    color: #fff3e0;
+}
+
 .push-right {
     margin-left: auto;
 }
 
 .icon {
-        width: 28px;
-        height: 28px;
+        width: 36px;
+        height: 36px;
 } 
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.menu-card {
+    display: block;
+    padding: 10px;
+    background-color: #fde6cc;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: #4a2c14;
+    transition: transform 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+}
+
+.menu-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-card h3 {
+    margin: 12px 4px 4px;
+    font-size: 1.2rem;
+}
+
+.menu-card p {
+    margin: 0 4px 10px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.menu-card .more {
+    display: block;
+    margin: 0 4px 4px;
+    color: #b5651d;
+    font-weight: bold;
+}
