@@ -68,12 +68,110 @@ body{
 
 .push-right {
     margin-left: auto;
+    text-decoration: none;
+    background-color: #fff;
+    color: #a8714a;
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+    border-radius: 10px;
 }
 
 .icon {
         width: 36px;
         height: 36px;
+        
 } 
+
+.cart {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 10px;
+    color: #a8714a;
+}
+
+.menu-icon-navbar {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 10px;
+    color: #a8714a;
+}
+
+@media (max-width: 800px) {
+    .navbar a {
+        font-size: 0;
+    }
+
+    .navbar {
+        padding-inline: 12px;
+        gap: 10px;
+    }
+
+    .site-name {
+        font-size: 1.2rem;
+    }
+
+    .banner_container h2 {
+        white-space: nowrap;
+        font-size: 1.1rem;
+        padding: 6px 14px;
+    }
+
+    .footer-top, .footer-bottom {
+        height: 50px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    .footer-col {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer h3{
+        justify-content: center;
+    }
+
+    .footer p{
+        overflow-wrap: anywhere;
+    }
+
+    .footer-peek, .footer-sleep{
+        margin: 20px auto 0;
+    }
+
+    .footer-line{
+        padding: 0 12px;
+    }
+
+    .newsletter-row{
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px 16px;
+        text-align: center;
+    }
+
+    .newsletter{
+        width: 100%;
+    }
+
+    .newsletter input {
+        flex: 1;
+        min-width: 0;
+    }
+}
 
 .menu-grid {
     display: grid;
@@ -337,10 +435,13 @@ body{
     padding: 24px 0;
 }
 
+.discount-set{
+    display: flex;
+}
 .discount-track {
     display: flex;
     width: max-content;
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 60s linear infinite;
 }
 
 .discount-strip:hover .discount-track {
@@ -349,7 +450,7 @@ body{
 
 @keyframes scroll-left {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to   { transform: translateX(-20%); }
 }
 
 .discount-card {
